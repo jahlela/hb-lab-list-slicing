@@ -54,44 +54,43 @@ def custom_append(input_list, value):
     True
 
     """
-
     length = custom_len(input_list)
     input_list[length:length + 1] = [value]
 
 
 
-# def custom_extend(input_list, second_list):
-#     """
-#     like input_list.extend(second_list), should append every item in the second
-#     list to the end of the first list and return nothing
+def custom_extend(input_list, second_list):
+    """
+    like input_list.extend(second_list), should append every item in the second
+    list to the end of the first list and return nothing
 
-#     For example:
+    For example:
 
-#     >>> months = ['Jan', 'Feb', 'Mar']
-#     >>> custom_extend(months, ['Apr', 'May'])
-#     >>> months == ['Jan', 'Feb', 'Mar', 'Apr', 'May']
-#     True
+    >>> months = ['Jan', 'Feb', 'Mar']
+    >>> custom_extend(months, ['Apr', 'May'])
+    >>> months == ['Jan', 'Feb', 'Mar', 'Apr', 'May']
+    True
 
-#     """
+    """
+    for each in second_list:
+        custom_append(input_list, each)
 
-#     pass
 
+def custom_insert(input_list, index, value):
+    """
+    like input_list.insert(index, value), should insert (not replace) the value
+    at the specified index of the input list and return nothing
 
-# def custom_insert(input_list, index, value):
-#     """
-#     like input_list.insert(index, value), should insert (not replace) the value
-#     at the specified index of the input list and return nothing
+    For example:
 
-#     For example:
+    >>> months = ['Jan', 'Mar']
+    >>> custom_insert(months, 1, 'Feb')
+    >>> months == ['Jan', 'Feb', 'Mar']
+    True
 
-#     >>> months = ['Jan', 'Mar']
-#     >>> custom_insert(months, 1, 'Feb')
-#     >>> months == ['Jan', 'Feb', 'Mar']
-#     True
+    """
 
-#     """
-
-#     pass
+    input_list[index:index] = [value]
 
 
 # def custom_remove(input_list, value):
